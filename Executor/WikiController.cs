@@ -18,7 +18,7 @@ namespace fStats.Executor
             HttpClient = new HttpClient();
         }
 
-        public static async Task<string> GetPageAsync(Uri uri)
+        public static async Task<string> GetPageAsync(string uri)
         {
             try
             {
