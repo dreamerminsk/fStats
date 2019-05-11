@@ -31,5 +31,10 @@ namespace fStats
             Console.WriteLine(rows.Count);
             return;
         }
+
+        private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }
