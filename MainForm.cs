@@ -15,16 +15,22 @@ namespace fStats
     public partial class MainForm : Form
     {
 
-        private BindingList<LeagueTableRow> source = new BindingList<LeagueTableRow>();
+        private readonly BindingList<LeagueTableRow> source = new BindingList<LeagueTableRow>();
 
         public MainForm()
         {
             InitializeComponent();
         }
 
-        private async void MainForm_LoadAsync(object sender, EventArgs e)
+        private void MainForm_Load(object sender, EventArgs e)
         {
             dataGridView1.DataSource = source;
+            return;
+        }
+
+        private async Task<List<LeagueTableRow>> LoadData()
+        {
+            var data = new List<LeagueTableRow>();
             string html = await WikiController.GetPageAsync("https://en.wikipedia.org/wiki/2016–17_Premier_League");
             var doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(html);
@@ -43,19 +49,36 @@ namespace fStats
                 Console.WriteLine("-------------------------------------------");
                 foreach (var item in cell)
                 {
-                    if ("td".Equals(item.Name) || "th".Equals(item.Name))
+                    if ("th".Equals(item.Name))
                     {
-                        Console.WriteLine(item.Name + ": " +  item.InnerText.Trim());
+                        Console.WriteLine(item.Name + ": " + item.InnerText.Trim());
+                        LeagueTableRow ltr = new LeagueTableRow
+                        {
+                            Position = int.Parse(item.InnerText.Trim())
+                        };
+                        data.Add(ltr);
+                    }
+                    if ("td".Equals(item.Name))
+                    {
+                        Console.WriteLine(item.Name + ": " + item.InnerText.Trim());
                     }
                 }
-{}
             }
-            return;
+            return data;
         }
 
         private void DataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private async void ToolStripButton1_ClickAsync(object sender, EventArgs e)
+        {
+            source.Clear();
+            var data = await LoadData();
+            foreach(var item in data)
+            { source.Add(item); }
+            return;
         }
     }
 }
