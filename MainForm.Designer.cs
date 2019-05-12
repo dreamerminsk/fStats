@@ -42,17 +42,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.leagueTableRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.teamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gamesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.wonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.drawnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.gDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pointsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bindingNavigator1 = new System.Windows.Forms.BindingNavigator(this.components);
             this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
@@ -65,15 +54,26 @@
             this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
             this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
             this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
+            this.leagueTableRowBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.positionDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.teamDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gamesDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.wonDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.drawnDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.lostDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gFDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gADataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.gDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pointsDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.toolStripContainer1.ContentPanel.SuspendLayout();
             this.toolStripContainer1.TopToolStripPanel.SuspendLayout();
             this.toolStripContainer1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.toolStrip1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leagueTableRowBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).BeginInit();
             this.bindingNavigator1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.leagueTableRowBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // toolStripContainer1
@@ -206,70 +206,6 @@
             this.exitToolStripMenuItem.Size = new System.Drawing.Size(92, 22);
             this.exitToolStripMenuItem.Text = "Exit";
             // 
-            // leagueTableRowBindingSource
-            // 
-            this.leagueTableRowBindingSource.DataSource = typeof(fStats.Model.LeagueTableRow);
-            // 
-            // positionDataGridViewTextBoxColumn
-            // 
-            this.positionDataGridViewTextBoxColumn.DataPropertyName = "Position";
-            this.positionDataGridViewTextBoxColumn.HeaderText = "Position";
-            this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
-            // 
-            // teamDataGridViewTextBoxColumn
-            // 
-            this.teamDataGridViewTextBoxColumn.DataPropertyName = "Team";
-            this.teamDataGridViewTextBoxColumn.HeaderText = "Team";
-            this.teamDataGridViewTextBoxColumn.Name = "teamDataGridViewTextBoxColumn";
-            // 
-            // gamesDataGridViewTextBoxColumn
-            // 
-            this.gamesDataGridViewTextBoxColumn.DataPropertyName = "Games";
-            this.gamesDataGridViewTextBoxColumn.HeaderText = "Games";
-            this.gamesDataGridViewTextBoxColumn.Name = "gamesDataGridViewTextBoxColumn";
-            // 
-            // wonDataGridViewTextBoxColumn
-            // 
-            this.wonDataGridViewTextBoxColumn.DataPropertyName = "Won";
-            this.wonDataGridViewTextBoxColumn.HeaderText = "Won";
-            this.wonDataGridViewTextBoxColumn.Name = "wonDataGridViewTextBoxColumn";
-            // 
-            // drawnDataGridViewTextBoxColumn
-            // 
-            this.drawnDataGridViewTextBoxColumn.DataPropertyName = "Drawn";
-            this.drawnDataGridViewTextBoxColumn.HeaderText = "Drawn";
-            this.drawnDataGridViewTextBoxColumn.Name = "drawnDataGridViewTextBoxColumn";
-            // 
-            // lostDataGridViewTextBoxColumn
-            // 
-            this.lostDataGridViewTextBoxColumn.DataPropertyName = "Lost";
-            this.lostDataGridViewTextBoxColumn.HeaderText = "Lost";
-            this.lostDataGridViewTextBoxColumn.Name = "lostDataGridViewTextBoxColumn";
-            // 
-            // gFDataGridViewTextBoxColumn
-            // 
-            this.gFDataGridViewTextBoxColumn.DataPropertyName = "GF";
-            this.gFDataGridViewTextBoxColumn.HeaderText = "GF";
-            this.gFDataGridViewTextBoxColumn.Name = "gFDataGridViewTextBoxColumn";
-            // 
-            // gADataGridViewTextBoxColumn
-            // 
-            this.gADataGridViewTextBoxColumn.DataPropertyName = "GA";
-            this.gADataGridViewTextBoxColumn.HeaderText = "GA";
-            this.gADataGridViewTextBoxColumn.Name = "gADataGridViewTextBoxColumn";
-            // 
-            // gDDataGridViewTextBoxColumn
-            // 
-            this.gDDataGridViewTextBoxColumn.DataPropertyName = "GD";
-            this.gDDataGridViewTextBoxColumn.HeaderText = "GD";
-            this.gDDataGridViewTextBoxColumn.Name = "gDDataGridViewTextBoxColumn";
-            // 
-            // pointsDataGridViewTextBoxColumn
-            // 
-            this.pointsDataGridViewTextBoxColumn.DataPropertyName = "Points";
-            this.pointsDataGridViewTextBoxColumn.HeaderText = "Points";
-            this.pointsDataGridViewTextBoxColumn.Name = "pointsDataGridViewTextBoxColumn";
-            // 
             // bindingNavigator1
             // 
             this.bindingNavigator1.AddNewItem = this.bindingNavigatorAddNewItem;
@@ -296,7 +232,7 @@
             this.bindingNavigator1.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
             this.bindingNavigator1.Name = "bindingNavigator1";
             this.bindingNavigator1.PositionItem = this.bindingNavigatorPositionItem;
-            this.bindingNavigator1.Size = new System.Drawing.Size(255, 25);
+            this.bindingNavigator1.Size = new System.Drawing.Size(286, 25);
             this.bindingNavigator1.TabIndex = 2;
             this.bindingNavigator1.Text = "bindingNavigator1";
             // 
@@ -385,6 +321,70 @@
             this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 22);
             this.bindingNavigatorDeleteItem.Text = "Delete";
             // 
+            // leagueTableRowBindingSource
+            // 
+            this.leagueTableRowBindingSource.DataSource = typeof(fStats.Model.LeagueTableRow);
+            // 
+            // positionDataGridViewTextBoxColumn
+            // 
+            this.positionDataGridViewTextBoxColumn.DataPropertyName = "Position";
+            this.positionDataGridViewTextBoxColumn.HeaderText = "Position";
+            this.positionDataGridViewTextBoxColumn.Name = "positionDataGridViewTextBoxColumn";
+            // 
+            // teamDataGridViewTextBoxColumn
+            // 
+            this.teamDataGridViewTextBoxColumn.DataPropertyName = "Team";
+            this.teamDataGridViewTextBoxColumn.HeaderText = "Team";
+            this.teamDataGridViewTextBoxColumn.Name = "teamDataGridViewTextBoxColumn";
+            // 
+            // gamesDataGridViewTextBoxColumn
+            // 
+            this.gamesDataGridViewTextBoxColumn.DataPropertyName = "Games";
+            this.gamesDataGridViewTextBoxColumn.HeaderText = "Games";
+            this.gamesDataGridViewTextBoxColumn.Name = "gamesDataGridViewTextBoxColumn";
+            // 
+            // wonDataGridViewTextBoxColumn
+            // 
+            this.wonDataGridViewTextBoxColumn.DataPropertyName = "Won";
+            this.wonDataGridViewTextBoxColumn.HeaderText = "Won";
+            this.wonDataGridViewTextBoxColumn.Name = "wonDataGridViewTextBoxColumn";
+            // 
+            // drawnDataGridViewTextBoxColumn
+            // 
+            this.drawnDataGridViewTextBoxColumn.DataPropertyName = "Drawn";
+            this.drawnDataGridViewTextBoxColumn.HeaderText = "Drawn";
+            this.drawnDataGridViewTextBoxColumn.Name = "drawnDataGridViewTextBoxColumn";
+            // 
+            // lostDataGridViewTextBoxColumn
+            // 
+            this.lostDataGridViewTextBoxColumn.DataPropertyName = "Lost";
+            this.lostDataGridViewTextBoxColumn.HeaderText = "Lost";
+            this.lostDataGridViewTextBoxColumn.Name = "lostDataGridViewTextBoxColumn";
+            // 
+            // gFDataGridViewTextBoxColumn
+            // 
+            this.gFDataGridViewTextBoxColumn.DataPropertyName = "GF";
+            this.gFDataGridViewTextBoxColumn.HeaderText = "GF";
+            this.gFDataGridViewTextBoxColumn.Name = "gFDataGridViewTextBoxColumn";
+            // 
+            // gADataGridViewTextBoxColumn
+            // 
+            this.gADataGridViewTextBoxColumn.DataPropertyName = "GA";
+            this.gADataGridViewTextBoxColumn.HeaderText = "GA";
+            this.gADataGridViewTextBoxColumn.Name = "gADataGridViewTextBoxColumn";
+            // 
+            // gDDataGridViewTextBoxColumn
+            // 
+            this.gDDataGridViewTextBoxColumn.DataPropertyName = "GD";
+            this.gDDataGridViewTextBoxColumn.HeaderText = "GD";
+            this.gDDataGridViewTextBoxColumn.Name = "gDDataGridViewTextBoxColumn";
+            // 
+            // pointsDataGridViewTextBoxColumn
+            // 
+            this.pointsDataGridViewTextBoxColumn.DataPropertyName = "Points";
+            this.pointsDataGridViewTextBoxColumn.HeaderText = "Points";
+            this.pointsDataGridViewTextBoxColumn.Name = "pointsDataGridViewTextBoxColumn";
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,10 +406,10 @@
             this.toolStrip1.PerformLayout();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.leagueTableRowBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingNavigator1)).EndInit();
             this.bindingNavigator1.ResumeLayout(false);
             this.bindingNavigator1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.leagueTableRowBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -430,7 +430,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.BindingNavigator bindingNavigator1;
         private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.BindingSource leagueTableRowBindingSource;
         private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
         private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
@@ -451,6 +450,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gADataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn gDDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn pointsDataGridViewTextBoxColumn;
+        public System.Windows.Forms.BindingSource leagueTableRowBindingSource;
     }
 }
 

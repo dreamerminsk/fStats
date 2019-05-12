@@ -1,4 +1,5 @@
 ﻿using fStats.Executor;
+using fStats.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,9 @@ namespace fStats
 {
     public partial class MainForm : Form
     {
+
+        private BindingList<LeagueTableRow> source = new BindingList<LeagueTableRow>();
+
         public MainForm()
         {
             InitializeComponent();
@@ -20,6 +24,7 @@ namespace fStats
 
         private async void MainForm_LoadAsync(object sender, EventArgs e)
         {
+            dataGridView1.DataSource = source;
             string html = await WikiController.GetPageAsync("https://en.wikipedia.org/wiki/2016–17_Premier_League");
             var doc = new HtmlAgilityPack.HtmlDocument();
             doc.LoadHtml(html);
@@ -29,6 +34,22 @@ namespace fStats
             Console.WriteLine(tables.Count);
             var rows = tables.Take(1).SelectMany(x => x.SelectNodes(x.XPath + "/tbody/tr")).Skip(1).ToList();
             Console.WriteLine(rows.Count);
+            var cells = rows.Select(x =>
+            {
+                return x.Descendants();
+            }).ToList();
+            foreach (var cell in cells)
+            {
+                Console.WriteLine("-------------------------------------------");
+                foreach (var item in cell)
+                {
+                    if ("td".Equals(item.Name) || "th".Equals(item.Name))
+                    {
+                        Console.WriteLine(item.Name + ": " +  item.InnerText.Trim());
+                    }
+                }
+{}
+            }
             return;
         }
 
