@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/dreamerminsk/fStats/issues"
   },
-  "homepage": "https://github.com/dreamerminsk/fStats#readme"
+  "homepage": "https://github.com/dreamerminsk/fStats#readme",
+  "dependencies": {
+    "mongodb": "^3.3.5"
+  }
 }
